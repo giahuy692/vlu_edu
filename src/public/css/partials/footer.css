@@ -1,0 +1,78 @@
+:root {
+    --popular-color: #013668;
+    --hover-color:#466297;
+    --hover-1-color:#c8d6e5;
+}
+
+.footer___img{
+    display: block; 
+    margin: 10px auto;
+}
+
+.img__container{
+    position: relative;
+}
+
+.img__container:before {
+    content: "";
+    height: 100%;
+    width: 0;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    background-color: #FFF;
+    z-index: -1;
+    transition: width 0.25s ease-in;
+ }
+ 
+ .img__container:hover:before {
+    width: 100%;
+ }
+
+
+.row {
+    display: flex;
+    margin-left: -8px;
+    margin-right: -8px;
+    background-color: var(--hover-color);
+}
+
+.row__cell {
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+/* Cell with given width. Replace 25% with whatever you want */
+.row__cell--1c4 {
+    flex: 0 0 25%;
+}
+
+.row__cell--1c2 {
+    flex: 0 0 50%;
+}
+
+.row__cell--fill {
+    flex: 1;
+}
+
+.clear__row{
+    clear: both;
+}
+
+/* content footer */
+.social-share {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+  }
+  .social-item {
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    cursor: pointer;
+  }
+ 
