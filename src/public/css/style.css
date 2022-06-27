@@ -10,7 +10,13 @@
     margin-left: auto;
     margin-right: auto;
     width: 50%;
-  }
+}
+
+.text__popular{
+    font-weight: 700;
+    font-size: 1.5rem;
+    color:  var(--popular-color);
+}
 
 .hover__effect:before {
     content: "";
