@@ -4,6 +4,10 @@ const path = require('path')
 const port = 4000
 const morgan= require('morgan')
 
+// database
+const database = require('./config/database')
+database.connect();
+
 //route
 const route = require('./routes')
 route(app);

@@ -1,0 +1,11 @@
+
+
+.w3-hover-red:hover {
+    color: #fff!important;
+    background-color: #f44336!important;
+}
+
+.sedu_color{
+    background-color: var(--popular-color) !important; 
+    color: var(--hover-1-color);
+}

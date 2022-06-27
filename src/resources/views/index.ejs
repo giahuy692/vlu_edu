@@ -7,17 +7,18 @@
 <body>
     <div class="container__layout">
         <header>
-            <%- include('./partials/header.ejs') %>
+            <%- include('./partials/header.ejs',{user: user}) %>
+
         </header>
         <main class="container__main">
             <!-- Left sidebar -->
-            <aside class="container__left">
+            <!-- <aside class="container__left">
                 <div class="menu__left">
                     <div class="card__title">
                         <% if(user) { %> 
                             <i class="fas fa-th"><b style="padding-left:10px">Chức năng</b></i>
-                        <%} else { %> 
-                            <i class="fas fa-th"> Tin Tức</i>
+                            <%} else if(user == null) { %> 
+                                <i class="fas fa-th"> Tin Tức</i>
                         <%} %>
                     </div>
                     <ul class="content__left">
@@ -26,17 +27,50 @@
                         <li><a href="#"><i class="fas fa-chevron-right"> Link 3</i></a></li>
                     </ul>
                 </div>
-            </aside>
+            </aside> -->
     
             <!-- Main content -->
-            <article class="container__middle">...</article>
+            <article class="container__middle m__12 box__shadow">
+                <div class="d__flex-sedu">
+                    <!-- start: tabs -->
+                    <div class="w3-bar-block sedu_color w3-card " style="width:auto; min-width: 224px;">
+                        <h5 class="w3-bar-item">Menu</h5>
+                        <button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'center1')">Tin tức - Sự kiện</button>
+                        <button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'center2')">THÔNG TIN GIỜ HỌC</button>
+                    </div>
+
+                    <div class="content__tab" style="width: 100%;">
+                        <div class="w3-padding center" id="titleTab" style="display: block;">
+					        <img src="/img/3-250x150.png" alt="" class="center"><br>
+                            <p style="text-align: center;">
+                                Sẽ không bao giờ có bế tắc thật sự,<br>
+                                Nếu như trong bạn còn niềm tin!
+                            </p>
+                        </div>
+                        <div id="center1" class="w3-container city w3-animate-left" style="display:none">
+                          <h2>Slide in from left1</h2>
+                          <p>Paris is the capital of France.</p> 
+                          <p>The Paris area is one of the largest population centers in Europe, with more than 12 million inhabitants.</p>
+                        </div>
+                        <div id="center2" class="w3-container city w3-animate-left" style="display:none">
+                            <h2>Slide in from left2</h2>
+                            <p>Paris is the capital of France.</p> 
+                            <p>The Paris area is one of the largest population centers in Europe, with more than 12 million inhabitants.</p>
+                        </div>
+                    </div>
+                      <!-- end: tabs -->
+                </div>
+            </article>
     
             <!-- Right sidebar -->
-            <nav class="container__right">...</nav>
+            <nav class="container__right">
+                <%- include('./component/login') %>
+            </nav>
         </main>
-        <footer>
+        <footer class="footer">
             <%- include('./partials/footer') %>
         </footer>
     </div>
 </body>
+<script src="js/style.js"></script>
 </html>

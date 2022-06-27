@@ -5,6 +5,43 @@
     --hover-1-color:#c8d6e5;
 }
 
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+
+.hover__effect:before {
+    content: "";
+    height: 100%;
+    width: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--hover-1-color);
+    z-index: -1;
+    transition: width 0.25s ease-in;
+ }
+
+ .hover__effect:hover:before {
+    width: 100%;
+ }
+
+.d__flex-sedu{
+    display: flex !important;
+    height: 100%;
+    overflow: auto;
+}
+
+.m__12{
+    margin: 12px !important;
+}
+
+.box__shadow{
+    box-shadow: 0px 15px 20px rgb(0 0 0 / 10%);
+}
+
 .container__layout {
     display: flex;
     flex-direction: column;
@@ -22,7 +59,7 @@
 .container__left {
     width: 20%;
 }
-
+/* 
 .container__left .menu__left{
     margin: 12px;
     border: 1px solid #000;
@@ -72,7 +109,7 @@
 
 .content__left li a:hover:before {
     width: 100%;
- }
+ } */
 
 /* :hover{
     background-color: var(--hover-color);
@@ -81,9 +118,13 @@
 
 .container__middle {
     /* Take the remaining width */
-    flex-grow: 1;
+    flex-grow: 1;   
 }
 
 .container__right {
-    width: 25%;
+    width: 28%;
+}
+
+.content__tab{
+    width: 100%; 
 }

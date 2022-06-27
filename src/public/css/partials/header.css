@@ -10,10 +10,6 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-:root {
-  --popular-color: #013668;
-}
-
 .wrapper {
   background-color: var(--popular-color);
   /*#171c24*/
@@ -49,6 +45,15 @@ nav .content .links {
   font-size: 30px;
   font-weight: 600;
 }
+
+
+.logo a .logo__image {
+  max-width: 55%;
+  height: auto;
+}
+
+
+
 
 .content .links li {
   list-style: none;

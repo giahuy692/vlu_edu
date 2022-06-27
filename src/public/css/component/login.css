@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+::selection{
+  background: var(--popular-color);
+  color: #fff;
+}
+.wrapper__menu{
+  width: 380px;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0px 15px 20px rgba(0,0,0,0.1);
+}
+.wrapper__menu .title__menu{
+  font-size: 35px;
+  font-weight: 600;
+  text-align: center;
+  line-height: 100px;
+  color: #fff;
+  user-select: none;
+  border-radius: 15px 15px 0 0;
+  background: linear-gradient(-135deg, var(--popular-color), var(--hover-color));
+}
+.wrapper__menu #form__menu{
+  padding: 10px 30px 50px 30px;
+  position: relative;
+}
+.wrapper__menu #form__menu .field__menu{
+  height: 50px;
+  width: 100%;
+  margin-top: 20px;
+  position: relative;
+}
+.wrapper__menu #form__menu .field__menu input{
+  height: 100%;
+  width: 100%;
+  outline: none;
+  font-size: 17px;
+  padding-left: 20px;
+  border: 1px solid lightgrey;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+}
+.wrapper__menu #form__menu .field__menu input:focus,
+#form__menu .field__menu input:valid{
+  border-color: #4158d0;
+}
+.wrapper__menu #form__menu .field__menu label{
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  color: #999999;
+  font-weight: 400;
+  font-size: 17px;
+  pointer-events: none;
+  transform: translateY(-50%);
+  transition: all 0.3s ease;
+}
+
+#form__menu .field__menu input:focus ~ label,
+#form__menu .field__menu input:valid ~ label{
+  top: 0%;
+  font-size: 16px;
+  color: #4158d0;
+  background: #fff;
+  transform: translateY(-50%);
+}
+#form__menu .content{
+  display: flex;
+  width: 100%;
+  height: 50px;
+  font-size: 16px;
+  align-items: center;
+  justify-content: space-around;
+}
+#form__menu .content .checkbox{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#form__menu .content input{
+  width: 15px;
+  height: 15px;
+  background: red;
+}
+#form__menu .content label{
+  color: #262626;
+  user-select: none;
+  padding-left: 5px;
+}
+#form__menu .content .pass-link{
+  color: "";
+}
+#form__menu .field__menu input[type="submit"]{
+  color: #fff;
+  border: none;
+  padding-left: 0;
+  margin-top: -10px;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+  background: linear-gradient(-135deg, var(--popular-color), var(--hover-color));
+  transition: all 0.3s ease;
+}
+#form__menu .field__menu input[type="submit"]:active{
+  transform: scale(0.95);
+}
+#form__menu .signup-link{
+  color: #262626;
+  margin-top: 20px;
+  text-align: center;
+}
+#form__menu .pass-link a,
+#form__menu .signup-link a{
+  color: #4158d0;
+  text-decoration: none;
+}
+#form__menu .pass-link a:hover,
+#form__menu .signup-link a:hover{
+  text-decoration: underline;
+}
+
+
+
+
+
+
+
