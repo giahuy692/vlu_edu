@@ -4,20 +4,7 @@
     <main class="container__main">
         <!-- Left sidebar -->
         <!-- <aside class="container__left">
-            <div class="menu__left">
-                <div class="card__title">
-                    <% if(user) { %> 
-                        <i class="fas fa-th"><b style="padding-left:10px">Chức năng</b></i>
-                        <%} else if(user == null) { %> 
-                            <i class="fas fa-th"> Tin Tức</i>
-                    <%} %>
-                </div>
-                <ul class="content__left">
-                    <li><a href="#"><i class="fas fa-chevron-right"> Link 1</i></a></li>
-                    <li><a href="#"><i class="fas fa-chevron-right"> Link 2</i></a></li>
-                    <li><a href="#"><i class="fas fa-chevron-right"> Link 3</i></a></li>
-                </ul>
-            </div>
+
         </aside> -->
 
         <!-- Main content -->
@@ -55,7 +42,7 @@
 
         <!-- Right sidebar -->
         <nav class="container__right">
-            <%- include('../component/auth') %>
+            <%- include('../components/auth.ejs') %>
         </nav>
     </main>
 

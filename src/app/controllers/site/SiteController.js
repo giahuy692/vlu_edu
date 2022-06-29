@@ -1,14 +1,13 @@
 const UserModels = require('../../models/users')
 
 class SiteController {
-    home(req,res, next){
-        UserModels.find( {username: 'giahuy9'} )
+    home(req, res, next){
+        UserModels.find( )
         .then((user) => {
             res.render('pages/index',{
                 title: 'Cổng thông tin đào tạo',
                 user: user,
             });
-            console.log(user);
         }).catch(next)
 
     }

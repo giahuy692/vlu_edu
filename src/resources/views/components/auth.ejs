@@ -1,0 +1,99 @@
+<link rel="stylesheet" href="css/component/auth.css">
+<div class="wrapper__auth m__12">
+   <div class="title_text">
+       <div class="title login">
+           Login Form
+       </div>
+       <div class="title signup">
+           Signup Form
+       </div>
+   </div>
+   <div class="form__container-auth">
+       <div class="slide__controls-auth">
+           <input type="radio" name="slide" id="login" checked>
+           <input type="radio" name="slide" id="signup">
+           <label for="login" class="slide login">Login</label>
+           <label for="signup" class="slide signup">Signup</label>
+           <div class="slider-tab"></div>
+       </div>
+       <%- include('../partials/messages.ejs'); %>
+    
+       <div class="form-inner">
+            <form action="/user/login" class="login" method="POST">
+                <div class="field">
+                    <input type="text" placeholder="Email Address" required>
+                </div>
+                <div class="field">
+                    <input type="password" placeholder="Password" required>
+                </div>
+                <div class="pass-link">
+                    <a href="#">Forgot password?</a>
+                </div>
+                <div class="field btn">
+                    <div class="btn-layer"></div>
+                    <input type="submit" value="Login">
+                </div>
+                <div class="signup-link">
+                    Not a member? <a href="">Signup now</a>
+                </div>
+            </form>
+            <form action="/user/register" class="signup" method="POST">
+                <div class="field">
+                    <input 
+                        type="text" 
+                        id="name" 
+                        name="name"
+                        placeholder="Enter Name" 
+                        required
+                        value="<%= typeof name != 'undefined' ? name : '' %>"
+                        />
+                </div>
+                <div class="field">
+                    <input 
+                        type="email" 
+                        id="email"
+                        name="email"
+                        placeholder="Enter Email Address" 
+                        required
+                        value="<%= typeof email != 'undefined' ? email : '' %>"
+                        />
+                </div>
+                <div class="field">
+                    <input 
+                        type="text" 
+                        id="phone"
+                        name="phone"
+                        placeholder="Enter Phone number" 
+                        required
+                        value="<%= typeof phone != 'undefined' ? phone : '' %>"
+                        />
+                </div>
+                <div class="field">
+                    <input 
+                        type="password" 
+                        id="password"
+                        name="password"
+                        placeholder="Enter Password" 
+                        required
+                        value="<%= typeof email != 'undefined' ? password : '' %>"
+                        />
+                </div>
+                <div class="field">
+                    <input 
+                        type="password" 
+                        id="confirmPassword"
+                        name="confirmPassword"
+                        placeholder="Enter Confirm password" 
+                        required
+                        value="<%= typeof email != 'undefined' ? confirmPassword : '' %>"
+                        >
+                </div>
+                <div class="field btn">
+                    <div class="btn-layer"></div>
+                    <input type="submit" value="Sign Up">
+                </div>
+            </form>
+       </div>
+   </div>
+</div>
+<%- include('../elements/authScript'); %>
