@@ -1,9 +1,23 @@
 const UserModel = require('../../models/users');
 const bcrypt = require('bcryptjs'); //Login
+const passport =  require('passport');
 
 class UsersController{
+
+    dashboard(req,res,next){
+        res.render('pages/dashboard.ejs', {
+            title:'dashboard',
+            fullname:req.user.fullname,
+        });
+    }
+
+
     login(req, res, next){
-        res.send('Loign');
+        passport.authenticate('local', {
+            successRedirect: '/user/dashboard',
+            failureRedirect: '/',
+            failureFlash: true
+        })(req,res,next);
     }
 
     register(req, res, next) {
@@ -81,6 +95,16 @@ class UsersController{
                 }
             });
         }
+    }
+
+    logout(req, res, next){
+        req.logout(function(err){
+            if(err) { 
+                return next(err);
+            }
+            req.flash('success_msg', 'You are logged out');
+            res.redirect('/')
+        });
     }
 }
 

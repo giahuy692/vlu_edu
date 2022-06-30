@@ -19,12 +19,13 @@
        <%- include('../partials/messages.ejs'); %>
     
        <div class="form-inner">
+        
             <form action="/user/login" class="login" method="POST">
                 <div class="field">
-                    <input type="text" placeholder="Email Address" required>
+                    <input type="text" name="email" id="email-login" placeholder="Email Address" required>
                 </div>
                 <div class="field">
-                    <input type="password" placeholder="Password" required>
+                    <input type="password" name="password" id="password-login" placeholder="Password" required>
                 </div>
                 <div class="pass-link">
                     <a href="#">Forgot password?</a>
@@ -34,9 +35,10 @@
                     <input type="submit" value="Login">
                 </div>
                 <div class="signup-link">
-                    Not a member? <a href="">Signup now</a>
+                    Not a member? <a href="">SignUp now</a>
                 </div>
             </form>
+
             <form action="/user/register" class="signup" method="POST">
                 <div class="field">
                     <input 

@@ -1,12 +1,15 @@
-const express = require('express')
-const app = express()
-const path = require('path')
-const port = 4000
-const morgan= require('morgan')
-//login
-const flash =require('connect-flash')
-const session = require('express-session')
-
+const express = require('express');
+const app = express();
+const path = require('path');
+const port = 4000;
+const morgan= require('morgan');
+const passport = require('passport')
+// register
+const flash =require('connect-flash');
+// login
+const session = require('express-session');
+// Passport config
+require('./config/passport/passport')(passport) ;
 
 
 
@@ -24,22 +27,27 @@ app.set('layout', 'layouts/layout.ejs');
 app.set("views",path.join(__dirname, 'resources', 'views'));
 
 // BodyParser
-app.use(express.urlencoded({extended: false})); //login
+app.use(express.urlencoded({extended: false})); // register - login
 
 // Express Session (login)
 app.use(session({
   secret: 'secret',
   resave: true,
   saveUninitialized: true,
-}))
+}));
 
-//Connect flash (login)
+//Passport middleware (login)
+app.use(passport.initialize());
+app.use(passport.session());
+
+//Connect flash (register)
 app.use(flash());
 
-//Global Vars
+//Global Vars (register)
 app.use((req,res, next) => {
   res.locals.success_msg = req.flash('success_msg');
   res.locals.error_msg = req.flash('error_msg');
+  res.locals.error = req.flash('error');
   next();
 });
 
@@ -48,14 +56,14 @@ const database = require('./config/database');
 database.connect();
 
 //route
-const route = require('./routes')
+const route = require('./routes');
 route(app);
 
 // Morgan
-app.use(morgan('combined'))
+app.use(morgan('combined'));
 // -------------------
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.listen(port, () => {
-  console.log(`App listening on port http://localhost:${port}`)
-})
+  console.log(`App listening on port http://localhost:${port}`);
+});
