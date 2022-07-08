@@ -4,8 +4,8 @@ class SiteController {
     home(req, res, next){
         UserModels.find( )
         .then((user) => {
-            res.render('pages/index',{
-                title: 'Cổng thông tin đào tạo',
+            res.render('pages/notLoggedIn/index',{
+                title: 'Jihui language',
                 user: user,
             });
         }).catch(next)

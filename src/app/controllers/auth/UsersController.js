@@ -8,14 +8,23 @@ class UsersController{
         res.render('pages/dashboard.ejs', {
             title:'dashboard',
             fullname:req.user.fullname,
+            layout: 'layouts/layout_dashboard.ejs'
         });
+    }
+
+    pageLogin(req, res, next) {
+        res.render('components/auth',{
+            title:'login - register',
+            layout: 'layouts/layout__1',
+            csrfToken: req.csrfToken()
+        })
     }
 
 
     login(req, res, next){
         passport.authenticate('local', {
-            successRedirect: '/user/dashboard',
-            failureRedirect: '/',
+            successRedirect: '/',
+            failureRedirect: '/user/login',
             failureFlash: true
         })(req,res,next);
     }
@@ -44,7 +53,7 @@ class UsersController{
         console.log(errors.length)
 
         if(errors.length > 0 ) {
-            res.render('pages/index', {
+            res.render('components/auth', {
                 errors:errors,
                 fullname:name,
                 email:email,
@@ -61,7 +70,7 @@ class UsersController{
                 if(user){
                     //User exists
                     errors.push({msg: 'Email is already registered'});
-                    res.render('pages/index', {
+                    res.render('components/auth', {
                         errors:errors,
                         fullname:name,
                         email:email,
@@ -88,7 +97,7 @@ class UsersController{
                             newUser.save()
                             .then(user => {
                                 req.flash('success_msg', 'You are now register and can login')
-                                res.redirect('/');
+                                res.redirect('user/login');
                             })
                             .catch(err => console.log(err));
                     }))
