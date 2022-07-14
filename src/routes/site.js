@@ -1,10 +1,33 @@
+const csrf = require('csurf');
 const express = require('express');
 const router = express.Router();
 
-const siteController = require('../app/controllers/SiteController')
+// Middlewares
+const csrfProtection = csrf({ cookie: true })
+router.use(csrfProtection)
+
+const configAuth = require('../config/auth/auth')
+const siteController = require('../app/controllers/site/SiteController')
 
 
-router.get('/' ,siteController.home)
+// community: cộng đồng
+
+// scholarship: học bổng
+
+// induct
+
+// fees:Kỹ năng, lộ trình, giao tiếp, chứng chỉ, học sinh
+
+// course[GET]:Kỹ năng, lộ trình, giao tiếp, chứng chỉ, học sinh
+router.get('/library', siteController.library)
+
+// method[GET]: phương pháp
+router.get('/method',siteController.method)
+
+
+// HOME[GET]
+router.get('/',siteController.home);
+
 
 
 module.exports = router;
