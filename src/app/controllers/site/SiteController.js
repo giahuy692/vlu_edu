@@ -5,7 +5,7 @@ class SiteController {
         UserModels.find( )
         .then((user) => {
             res.render('pages/notLoggedIn/index',{
-                title: 'Jihui language',
+                title: 'VOCA language',
                 user: user,
             });
         }).catch(next)
@@ -15,12 +15,6 @@ class SiteController {
     method(req, res, next){
         res.render('pages/notLoggedIn/method', {
             title: 'PHƯƠNG PHÁP HỌC TIẾNG ANH'
-        })
-    }
-
-    library(req,res, next){
-        res.render('pages/notLoggedIn/library',{
-            title: 'THƯ VIỆN KHÓA HỌC'
         })
     }
 }

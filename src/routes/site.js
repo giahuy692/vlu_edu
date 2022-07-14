@@ -18,8 +18,6 @@ const siteController = require('../app/controllers/site/SiteController')
 
 // fees:Kỹ năng, lộ trình, giao tiếp, chứng chỉ, học sinh
 
-// course[GET]:Kỹ năng, lộ trình, giao tiếp, chứng chỉ, học sinh
-router.get('/library', siteController.library)
 
 // method[GET]: phương pháp
 router.get('/method',siteController.method)
