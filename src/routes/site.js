@@ -19,11 +19,14 @@ const siteController = require('../app/controllers/site/SiteController')
 // fees:Kỹ năng, lộ trình, giao tiếp, chứng chỉ, học sinh
 
 // course[GET]:Kỹ năng, lộ trình, giao tiếp, chứng chỉ, học sinh
+router.get('/library', siteController.library)
 
-// way[GET]: phương pháp
+// method[GET]: phương pháp
+router.get('/method',siteController.method)
+
 
 // HOME[GET]
-router.get('/',siteController.home)
+router.get('/',siteController.home);
 
 
 

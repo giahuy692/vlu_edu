@@ -11,6 +11,18 @@ class SiteController {
         }).catch(next)
 
     }
+
+    method(req, res, next){
+        res.render('pages/notLoggedIn/method', {
+            title: 'PHƯƠNG PHÁP HỌC TIẾNG ANH'
+        })
+    }
+
+    library(req,res, next){
+        res.render('pages/notLoggedIn/library',{
+            title: 'THƯ VIỆN KHÓA HỌC'
+        })
+    }
 }
 
 module.exports = new SiteController();

@@ -1,0 +1,67 @@
+.mb-150{
+    margin-bottom: 150px;
+}
+
+.pse-10{
+    padding-left: 10rem;
+    padding-right: 10rem;
+}
+
+.pse-8{
+    padding-left: 8rem;
+    padding-right: 8rem;
+}
+
+.home-cloud-bg {
+    background-image: url(../../img/home-cloud-bg.png);
+    height: 160px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -150px;
+}
+
+.mission-video-title::before{
+    content: '';
+    display: inline-block;
+    width: 54px;
+    height: 54px;
+    background: url(../../img/home-quote.svg);
+    position: absolute;
+    left: 0;
+}
+
+.mission-video-title::after{
+    content: '';
+    display: inline-block;
+    width: 54px;
+    height: 54px;
+    background: url(../../img/home-quote.svg);
+    position: absolute;
+    right: 0;
+    transform: rotate(180deg);
+    top: 0;
+}
+
+.mission-video-title{
+    max-width: 915px;
+    margin: 70px auto 0px;
+    text-align: center;
+    position: relative;
+}
+
+.mission-video-content{
+    max-width: 727px;
+    margin: 50px auto 0px;
+    border-radius: 28px;
+    overflow: hidden;
+}
+
+.benefit-cloud{
+    background-image: url(../../img/home-cloud-blue-bg.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 137.436px;
+    margin-bottom: -2px;
+    width: 100%;
+}

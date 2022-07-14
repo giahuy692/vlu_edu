@@ -1,0 +1,93 @@
+.method-top{
+    background: url(../../img/method-top-bg.svg);
+    height: 710px;
+    background-position: center;
+}
+
+.method-problem{
+    padding: 0 186px;
+    overflow: hidden;
+}
+
+.method-top-content{
+    padding: 65px 170px;
+}
+
+.method-top .top-left{
+    width: 500px;
+}
+
+.method-top .top-left h1{
+    font-size: 40px;
+}
+
+.method-top .top-left h2{
+    font-size: 80px;
+}
+
+.method-top .top-left h6{
+    font-size: 25px;
+}
+
+.problem-left{
+    width: 70%;
+    padding: 10px 64px 10px 10px;
+}
+
+.problem-left h2{
+    font-size: 32px;
+}
+
+.problem-content .content{
+    color: #777777;
+    font-size: 17px;
+    position: relative;
+    margin-top: 25px;
+    padding-left: 35px;
+}
+
+.problem-right{
+    width: 30%;
+}
+
+.problem-right img{
+    width: 300px;
+}
+
+.content::before{
+    content: '';
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    border-radius: 10px;
+    background: #DDDDDD;
+    position: absolute;
+    left: 0;
+    top: 3px;
+}
+
+.method-different-bg{
+    background: url(../../img/method-different-bg.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 213px;
+    background-position: center;
+}
+
+.method-different{
+
+}
+
+.method-different .method-different-content{
+    background: #0065d6;
+    padding: 0 24px;
+}
+
+.method-different-content .different-content{
+    width: 1140px;
+    margin: auto;
+}
+
+.method-document{
+    margin-top: 138px;
+}

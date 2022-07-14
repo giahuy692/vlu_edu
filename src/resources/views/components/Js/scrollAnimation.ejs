@@ -1,0 +1,44 @@
+<script>
+    const boxesLeft = document.querySelectorAll('.box-left');
+    const boxesRight = document.querySelectorAll('.box-right');
+    const boxesTop = document.querySelectorAll('.box-top');
+
+    window.addEventListener('scroll', checkBoxes);
+
+    checkBoxes()
+
+    function checkBoxes(){
+        
+        const triggerBottom = window.innerHeight / 5 * 4;
+
+        boxesLeft.forEach(box => {
+            const boxTop = box.getBoundingClientRect().top;
+
+            if(boxTop < triggerBottom){
+                box.classList.add('show');
+            } else{
+                box.classList.remove('show');
+            }
+        })
+
+        boxesRight.forEach(box => {
+            const boxTop = box.getBoundingClientRect().top;
+
+            if(boxTop < triggerBottom){
+                box.classList.add('show');
+            } else{
+                box.classList.remove('show');
+            }
+        })
+
+        boxesTop.forEach(box => {
+            const boxTop = box.getBoundingClientRect().top;
+
+            if(boxTop < triggerBottom) {
+                box.classList.add('show');
+            } else {
+                box.classList.remove('show');
+            }
+        })
+    }
+</script>

@@ -1,0 +1,30 @@
+<script>
+    document.addEventListener("DOMContentLoaded",function() {
+    var menu = document.querySelectorAll('.menu');
+   
+    var menu = menu[0];
+
+    console.log('menu: ', menu);
+     
+    //Truy xuất div menu
+    var status = "lessthan100";
+    window.addEventListener("scroll",function(){
+        var x = pageYOffset; //Trả về số pixel mà document đã được cuộn theo phương thẳng đứng.
+        if(x > 100){
+            if(status == "lessthan100")
+            {
+                status = "over100";
+                menu.classList.add('openmenu');
+                
+            }
+        }
+        else{
+            if(status=="over100"){
+            menu.classList.remove('openmenu');
+            
+            status="lessthan100";}
+        }
+    
+    })
+})
+</script>
