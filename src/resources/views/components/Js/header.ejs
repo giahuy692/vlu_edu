@@ -3,14 +3,13 @@
     var menu = document.querySelectorAll('.menu');
    
     var menu = menu[0];
-
-    console.log('menu: ', menu);
      
     //Truy xuất div menu
     var status = "lessthan100";
     window.addEventListener("scroll",function(){
         var x = pageYOffset; //Trả về số pixel mà document đã được cuộn theo phương thẳng đứng.
-        if(x > 100){
+        console.log(x);
+        if(x > 72){
             if(status == "lessthan100")
             {
                 status = "over100";
@@ -27,4 +26,29 @@
     
     })
 })
+
+
+document.addEventListener("DOMContentLoaded",function(){
+    var button = document.querySelectorAll("button");
+    console.log(button);
+    var button = button[0];
+
+    var menu = document.querySelectorAll(".menu__loggedIn");
+    var menu = menu[0];
+
+    
+    var bg__black50 = document.querySelectorAll(".bg__black50");
+    var bg__black50 = bg__black50[0];
+
+    var menu__loggedIn = document.querySelectorAll(".menu__loggedIn");
+    var menu__loggedIn = menu__loggedIn[0];
+    button.onclick = function(){
+        menu.classList.add('show');
+        bg__black50.classList.add('bg__black50__show');
+    }
+    bg__black50.onclick = function(){
+        bg__black50.classList.remove('bg__black50__show');
+        menu__loggedIn.classList.remove('show');
+    }
+},false)
 </script>

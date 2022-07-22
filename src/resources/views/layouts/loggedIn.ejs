@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base href="/">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/x-icon" href="img/imessenger/icon-messages-app-27x20@2x.png">
+
+    <!-- bootswatch -->
+    <link rel="stylesheet" href="https://bootswatch.com/5/sketchy/bootstrap.min.css">
+    <!-- ionicons  -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <!-- icon bootstrap  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+
+    <!-- css popular -->
+    <link rel="stylesheet" href="css/popular.css">
+
+
+    <title>
+        <% if (title) { %>
+            <%= title %>
+        <% } %>
+    </title>
+</head>
+<body>
+
+    
+    <%- include('../partials/loggedIn/header.ejs') %>
+
+    <%- body %> 
+
+    <%- include('../components/help/index.ejs') %>
+
+        
+    <!-- javaScript -->
+    <%- include("../components/Js/scrollAnimation.ejs") %>
+    
+    <!-- lottie-file -->
+     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+        
+     <!-- bootstrap -->
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
+
+

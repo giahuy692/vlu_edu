@@ -13,9 +13,17 @@ class UsersController{
     }
 
     pageLogin(req, res, next) {
-        res.render('components/auth',{
-            title:'login - register',
-            layout: 'layouts/layout__1',
+        res.render('pages/auth/login',{
+            title:'Login',
+            layout: 'layouts/auth',
+            csrfToken: req.csrfToken()
+        })
+    }
+
+    pageRegister(req, res, next) {
+        res.render('pages/auth/register',{
+            title:'Register',
+            layout: 'layouts/auth',
             csrfToken: req.csrfToken()
         })
     }
@@ -53,7 +61,7 @@ class UsersController{
         console.log(errors.length)
 
         if(errors.length > 0 ) {
-            res.render('components/auth', {
+            res.render('pages/auth/register', {
                 errors:errors,
                 fullname:name,
                 email:email,
@@ -61,6 +69,7 @@ class UsersController{
                 password:password,
                 confirmPassword:confirmPassword,
                 title: 'Cổng thông tin đào tạo',
+                csrfToken: req.csrfToken()
             })
             
         } else {
@@ -70,7 +79,7 @@ class UsersController{
                 if(user){
                     //User exists
                     errors.push({msg: 'Email is already registered'});
-                    res.render('components/auth', {
+                    res.render('pages/auth/register', {
                         errors:errors,
                         fullname:name,
                         email:email,
@@ -78,6 +87,7 @@ class UsersController{
                         password:password,
                         confirmPassword:confirmPassword,
                         title: 'Cổng thông tin đào tạo',
+                        csrfToken: req.csrfToken()
                     });
                 } else {
                     const newUser = new UserModel({

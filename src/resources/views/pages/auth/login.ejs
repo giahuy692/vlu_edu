@@ -1,0 +1,21 @@
+<div class="mse-50 mtb-50">
+    <div class="p-3 border border-primary rounded">
+        <form method="POST" action="user/login">
+            <div class="form-group">
+                <label class="form-label mt-4 fs-3 center">Login</label>
+                <%- include("../../partials/messages.ejs") %>
+                <div class="form-floating mb-3">
+                  <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com">
+                  <label for="email">Email address</label>
+                </div>
+                <div class="form-floating">
+                  <input type="password" class="form-control" id="password" name="password" placeholder="Password">
+                  <label for="password">Password</label>
+                </div>
+            </div>
+            <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+            <a href="/user/register" class="text-end d-block p-2">Do you want to <span class="text-info">Register</span> ?</a>
+            <button type="submit" class="btn btn-primary" style="width: 100%;">Submit</button>
+        </form>
+    </div>
+</div>

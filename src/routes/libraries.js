@@ -5,13 +5,7 @@ const router = express.Router();
 const librariesController = require('../app/controllers/libraries/LibrariesController')
 
 
-// community: cộng đồng
-
-// scholarship: học bổng
-
-// induct
-
-// fees:Kỹ năng, lộ trình, giao tiếp, chứng chỉ, học sinh
+router.get('/library-detail', librariesController.libraryDetail)
 
 // library[GET]:Kỹ năng, lộ trình, giao tiếp, chứng chỉ, học sinh
 router.get('/', librariesController.library)

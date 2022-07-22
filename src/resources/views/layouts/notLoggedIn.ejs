@@ -20,6 +20,9 @@
     <!-- css popular -->
     <link rel="stylesheet" href="css/popular.css">
 
+    <!-- css header -->
+    <link rel="stylesheet" href="css/partials/header.css">
+
     <!-- css way -->
     <link rel="stylesheet" href="css/notLoggedIn/method.css">
     <link rel="stylesheet" href="css/notLoggedIn/library.css">
@@ -36,9 +39,12 @@
 </head>
 <body>
 
+    <% if(localuser){ %> 
+        <%- include('../partials/loggedIn/header.ejs') %>
+    <%} else { %> 
+        <%- include('../partials/notLoggedIn/header.ejs') %>    
+    <%} %>
     
-    
-    <%- include('../partials/notLoggedIn/header.ejs') %>
 
     <%- body %> 
 
@@ -50,7 +56,6 @@
     <!-- javaScript -->
     <%- include("../components/Js/scrollAnimation.ejs") %>
     
-    <%- include("../components/Js/slick.ejs") %>
     
     <!-- lottie-file -->
      <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>

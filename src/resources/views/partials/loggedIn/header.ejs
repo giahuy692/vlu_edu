@@ -1,0 +1,78 @@
+<div class="bg__black50"></div>
+<div class="menu">
+    <nav class="navbar navbar-dark bg-dark rounded-0" style="z-index: 1030;">
+        <div class="container">
+            <div class="d-flex align-items-center">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <a href="#" class="d-flex align-items-center text-light ms-4 btn btn-secondary">
+                    <ion-icon name="person-circle-sharp" class="fs-4"></ion-icon>
+                    <span class="ps-2">
+                        cÁ NHÂN
+                    </span>
+                </a>
+                <a href="/library" class="d-flex align-items-center text-light ms-4 btn btn-secondary">
+                    <ion-icon name="book-sharp" class="fs-4"></ion-icon>
+                    <span class="ps-2">
+                        KHÓA HỌC
+                    </span>
+                </a>
+                <a href="/instruction" class="d-flex align-items-center text-light ms-4 btn btn-secondary">
+                    <ion-icon name="bookmark" class="fs-4"></ion-icon>
+                    <span class="ps-2">
+                        HƯỚNG DẪN
+                    </span>
+                </a>
+                <div href="#" class="d-flex align-items-center text-light ms-4 btn btn-secondary tool">
+                    <ion-icon name="pencil" class="fs-4"></ion-icon>
+                    <span class="ps-2">
+                        CÔNG CỤ 
+                    </span>
+                    <ul class="dropdown-tool">
+                        <div class="p-2">
+                            <li><a href="#" class="btn btn-light">Từ điển</a></li>
+                            <li><a href="#" class="btn btn-light">Ghim từ</a></li>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+            <div class="header-avatar">
+                <div class="avatar">
+                    <!-- Avatar image -->
+                    <img class="avatar__image" src="img/user.gif" />
+                </div>
+                <ul class="dropdown-avatar">
+                    <div class="p-2">
+                        <li><a href="#" class="btn btn-light">Trang cá nhân</a></li>
+                        <li><a href="#" class="btn btn-light">Cài đặt chung</a></li>
+                        <li><a href="#" class="btn btn-light">Quanr lý khóa học</a></li>
+                        <li><a href="/user/logout" class="btn btn-light">Đăng xuất</a></li>
+                    </div>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="collapse menu__loggedIn" id="navbarToggleExternalContent">
+        <div class="bg-dark dropdown__content">
+            <ul class="m-0 p-0">
+                <li class="border-bottom"><a href="/method" class="btn btn-secondary border-0 p-md-3" style="width: 100%;">PHƯƠNG PHÁP LUẬN</a></li>
+                <li class="border-bottom"><a href="" class="btn btn-secondary border-0 p-md-3" style="width: 100%;">HƯỚNG DẪN HỌC</a></li>
+                <li class="border-bottom"><a href="#" class="btn btn-secondary border-0 p-md-3" style="width: 100%;">CÂU CHUYỆN VOCA</a></li>
+                <li class="border-bottom"><a href="#" class="btn btn-secondary border-0 p-md-3" style="width: 100%;">BLOG</a></li>
+            </ul>
+            <div class="pt-3 text-light">
+                <span class="d-block ps-3">LIÊN HỆ VỚI VOCA:</span>
+                <div class="btn btn-secondary border-0" style="width: 100%;">
+                    <ion-icon name="call-outline"></ion-icon>
+                    <span> 000 0000 000</span>
+                </div>
+                <div class="btn btn-secondary border-0" style="width: 100%;">
+                    <ion-icon name="location-outline"></ion-icon>
+                    <span> Local address </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<%- include('../../components/Js/header.ejs') %>

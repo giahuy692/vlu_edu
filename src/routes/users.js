@@ -9,8 +9,12 @@ const usersController = require('../app/controllers/auth/UsersController');
 const csrfProtection = csrf({ cookie: true })
 router.use(csrfProtection)
 
-// Loading form login - register
+// Loading form login
 router.get('/login',csrfProtection,configAuth.notLoggedIn, usersController.pageLogin)
+
+// Loading form register
+router.get('/register',csrfProtection,configAuth.notLoggedIn, usersController.pageRegister)
+
 
 // Login page
 router.post('/login',configAuth.notLoggedIn, usersController.login)

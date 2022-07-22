@@ -17,6 +17,12 @@ class SiteController {
             title: 'PHƯƠNG PHÁP HỌC TIẾNG ANH'
         })
     }
+
+    instruction(req, res, next){
+        res.render('pages/loggedIn/instruction', {
+            title: 'PHƯƠNG PHÁP HỌC TIẾNG ANH'
+        })
+    }
 }
 
 module.exports = new SiteController();

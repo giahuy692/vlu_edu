@@ -9,15 +9,7 @@ router.use(csrfProtection)
 const configAuth = require('../config/auth/auth')
 const siteController = require('../app/controllers/site/SiteController')
 
-
-// community: cộng đồng
-
-// scholarship: học bổng
-
-// induct
-
-// fees:Kỹ năng, lộ trình, giao tiếp, chứng chỉ, học sinh
-
+router.get('/instruction',siteController.instruction)
 
 // method[GET]: phương pháp
 router.get('/method',siteController.method)

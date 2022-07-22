@@ -38,6 +38,36 @@
     padding-right: 105px !important;
 }
 
+.ptb-50{
+    padding-top:210px !important;
+    padding-bottom:210px !important;
+}
+
+.ptb-25{
+    padding-top: 105px !important;
+    padding-bottom: 105px !important;
+}
+
+.mse-50{
+    margin-left:210px !important;
+    margin-right:210px !important;
+}
+
+.mse-25{
+    margin-left: 105px !important;
+    margin-right: 105px !important;
+}
+
+.mtb-50{
+    margin-top:210px !important;
+    margin-bottom:210px !important;
+}
+
+.mtb-25{
+    margin-top: 105px !important;
+    margin-bottom: 105px !important;
+}
+
 .of-hidden{
     overflow: hidden !important;
 }

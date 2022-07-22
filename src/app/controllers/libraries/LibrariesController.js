@@ -6,6 +6,12 @@ class LibrariesController {
             title: 'THƯ VIỆN KHÓA HỌC'
         })
     }
+
+    libraryDetail(req, res, next) {
+        res.render('pages/notLoggedIn/details/library', {
+            title: 'CHI TIẾT KHÓA HỌC'
+        })
+    }
 }
 
 module.exports = new LibrariesController();
